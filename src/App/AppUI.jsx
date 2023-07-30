@@ -23,8 +23,8 @@ const AppUI = () => {
   } = React.useContext(TodoContext);
   return (
     <>
-      <div className="grid h-screen w-screen place-items-center">
-        <div className=" grid lg:grid-cols-2 grid-cols-1 w-[90%] justify-items-center max-sm:fixed ">
+      <div className="grid h-screen w-screen place-items-center fixed">
+        <div className=" grid lg:grid-cols-2 grid-cols-1 w-[90%] justify-items-center ">
           <div className=" max-lg:hidden grid grid-rows-1 h-[290px] p-8 place-self-center rounded-lg">
             <TodoForm />
           </div>
