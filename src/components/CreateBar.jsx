@@ -10,7 +10,6 @@ const CreateBar = () => {
             type="text"
             placeholder="Hacer el examen de Asincronismo"
             className="w-[20rem] bg-gradient-to-r from-slate-100 to-slate-200 rounded-lg p-2 mb-4"
-            
           />
       </div>
     );

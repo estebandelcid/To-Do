@@ -1,3 +1,5 @@
+
+
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +21,27 @@ code {
 
 @layer base {
   html {
-    @apply bg-gradient-to-bl from-neutral-100 to-orange-300;
+    /* @apply bg-fixed */ 
+    background-color: black;
+    background-image: url('./assets/background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: unset;
+  }
+}
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
