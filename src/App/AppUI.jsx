@@ -24,7 +24,7 @@ const AppUI = () => {
   return (
     <>
       <div className="grid h-screen w-screen place-items-center">
-        <div className=" grid lg:grid-cols-2 w-[90%] justify-items-center ">
+        <div className=" grid lg:grid-cols-2 grid-cols-1 w-[90%] justify-items-center max-sm:fixed ">
           <div className=" max-lg:hidden grid grid-rows-1 h-[290px] p-8 place-self-center rounded-lg">
             <TodoForm />
           </div>
@@ -34,7 +34,7 @@ const AppUI = () => {
               <TodoCounter />
               <TodoSearch />
             </div>
-            <div className=" grid place-content-center min-w-[350px] w-10/12 max-w-md max-h-10/12 bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
+            <div className=" grid place-content-center min-w-[350px] w-full max-w-md h-[500px] lg:h-[500px] bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
               <TodoList>
                 {loading && <TodosLoading />}
 

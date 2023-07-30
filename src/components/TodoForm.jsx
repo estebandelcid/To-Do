@@ -34,7 +34,7 @@ const TodoForm = () => {
           Task name
         </label>
         <input
-          className=" w-[calc(100%-25px)] lg:w-full lg:min-h-10 max-h-16 bg-neutral-800 rounded-lg shadow-md text-neutral-100 text-center p-2 outline-none focus:outline-neutral-500"
+          className=" w-full lg:w-full lg:min-h-10 max-h-16 bg-neutral-800 rounded-lg shadow-md text-neutral-100 text-center p-2 outline-none focus:outline-neutral-500 "
           placeholder="Study first course of Node.js"
           value={newTodoValue}
           onChange={onChange}
