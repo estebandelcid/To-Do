@@ -34,7 +34,7 @@ const AppUI = () => {
               <TodoCounter />
               <TodoSearch />
             </div>
-            <div className=" grid place-content-center min-w-[350px] w-full max-w-md h-[400px] lg:max-h-80 lg:h-[500px] bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
+            <div className=" grid place-content-center min-w-[350px] w-full max-w-md h-[380px] lg:max-h-80 lg:h-[500px] bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
               <TodoList>
                 {loading && <TodosLoading />}
 
