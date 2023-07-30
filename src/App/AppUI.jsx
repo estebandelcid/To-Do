@@ -4,7 +4,6 @@ import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
 import { ButtonCreateTodo } from "../components/ButtonCreateTodo";
-import engranes from "../assets/engranajes.png";
 import { CreateBar } from "../components/CreateBar";
 import TodosLoading from "../components/TodosLoading";
 import EmptyTodos from "../components/EmptyTodos.jsx";
@@ -37,7 +36,7 @@ const AppUI = () => {
               <TodoCounter />
               <TodoSearch />
             </div>
-            <div className=" grid place-content-center min-w-[350px] w-10/12 max-w-md max-h-80 bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
+            <div className=" grid place-content-center min-w-[350px] w-10/12 max-w-md max-h-10/12 bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
               <TodoList>
                 {loading && <TodosLoading />}
 
