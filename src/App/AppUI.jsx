@@ -25,11 +25,11 @@ const AppUI = () => {
     <>
       <div className="grid h-screen w-screen place-items-center fixed">
         <div className=" grid lg:grid-cols-2 grid-cols-1 w-[90%] justify-items-center ">
-          <div className=" max-lg:hidden grid grid-rows-1 h-[290px] p-8 place-self-center rounded-lg">
+          <div className=" max-lg:hidden grid grid-rows-1 h-[290px] p-8 place-items-center rounded-lg">
             <TodoForm />
           </div>
 
-          <div className="flex flex-col h-[90%] w-full space-y-12  place-self-center items-center">
+          <div className="flex flex-col h-[90%] w-full space-y-12  place-items-center items-center">
             <div className="space-y-6">
               <TodoCounter />
               <TodoSearch />
