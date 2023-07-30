@@ -4,14 +4,12 @@ import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
 import { ButtonCreateTodo } from "../components/ButtonCreateTodo";
-import { CreateBar } from "../components/CreateBar";
 import TodosLoading from "../components/TodosLoading";
 import EmptyTodos from "../components/EmptyTodos.jsx";
 import { TodoContext } from "../components/TodoContext.jsx";
 import Modal from "../components/Modal.jsx";
 import MobileButtonCreateTodo from "../components/MobileButtonCreateTodo";
 import TodoForm from "../components/TodoForm";
-import background from "../assets/background.jpg";
 
 const AppUI = () => {
   const {
