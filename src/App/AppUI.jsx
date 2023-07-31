@@ -3,7 +3,6 @@ import { TodoCounter } from "../components/TodoCounter.jsx";
 import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
-import { ButtonCreateTodo } from "../components/ButtonCreateTodo";
 import TodosLoading from "../components/TodosLoading";
 import EmptyTodos from "../components/EmptyTodos.jsx";
 import { TodoContext } from "../components/TodoContext.jsx";
@@ -40,7 +39,7 @@ const AppUI = () => {
 
                 {error && <p>Hubo un error, lo sentimos.😬</p>}
 
-                {!loading && searchedTodos == 0 && <EmptyTodos />}
+                {!loading && searchedTodos === 0 && <EmptyTodos />}
 
                 {searchedTodos.map((todo) => (
                   <TodoItem
