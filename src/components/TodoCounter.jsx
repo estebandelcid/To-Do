@@ -17,8 +17,8 @@ const TodoCounter = () => {
         {totalTodos === completedTodos && totalTodos >= 1 ? (
           <h2 className="text-xl font-semibold text-green-500 text-center">
             {" "}
-            Congratulations, <br />
-            You're complete all your tasks! 🥳
+            Finished all you´re tasks. <br />
+            
           </h2>
         ) : (
           <h2 className="text-xl font-semibold text-neutral-100">
