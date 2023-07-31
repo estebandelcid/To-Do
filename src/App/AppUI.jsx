@@ -39,7 +39,7 @@ const AppUI = () => {
 
                 {error && <p>Hubo un error, lo sentimos.😬</p>}
 
-                {!loading && searchedTodos === 0 && <EmptyTodos />}
+                {!loading && searchedTodos == 0 && <EmptyTodos />}
 
                 {searchedTodos.map((todo) => (
                   <TodoItem
