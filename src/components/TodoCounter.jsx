@@ -7,7 +7,7 @@ const TodoCounter = () => {
     return (
       <div className="flex flex-col items-center ">
         <h1
-          className=" text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#feb0e4] to-[#8f2abf] animate-bmove "
+          className=" text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#feb5fb] to-[#5f1d90] animate-bmove "
           style={{
             backgroundSize: "200%",
           }}
