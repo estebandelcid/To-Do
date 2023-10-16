@@ -22,18 +22,17 @@ const AppUI = () => {
   } = React.useContext(TodoContext);
   return (
     <>
-      <div className="grid h-screen w-screen place-items-center fixed">
-        <div className=" grid lg:grid-cols-2 grid-cols-1 w-[90%] justify-items-center ">
-          <div className=" max-lg:hidden grid grid-rows-1 h-[290px] p-8 place-items-center rounded-lg">
-            <TodoForm />
-          </div>
+      <div className="grid h-screen w-screen place-items-center ">
 
-          <div className="flex flex-col h-[90%] w-full space-y-12  place-items-center items-center">
-            <div className="space-y-6">
+        <div className=" grid grid-cols-1 w-[80%] justify-items-center ">
+         
+          <div className="flex flex-col h-[80%] w-full space-y-12 place-items-center items-center">
+            <div className="w-full justify-center space-y-6">
               <TodoCounter />
               <TodoSearch />
             </div>
-            <div className=" grid place-content-center min-w-[350px] w-full max-w-md h-[350px] lg:max-h-80 lg:h-[500px] bg-neutral-600 rounded-lg bg-opacity-10 backdrop-blur-3xl ">
+            <div className="flex justify-center min-w-[300px] w-full h-[300px] lg:max-h-[24rem] bg-texture bg-white/5 border-2 border-white border-opacity-[0.03] rounded-lg backdrop-filter backdrop-blur-3xl"
+            >
               <TodoList>
                 {loading && <TodosLoading />}
 
@@ -61,6 +60,11 @@ const AppUI = () => {
               </Modal>
             )}
           </div>
+
+          <div className=" max-md:hidden w-full rounded-lg ">
+            <TodoForm />
+          </div>
+
         </div>
       </div>
     </>

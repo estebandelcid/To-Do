@@ -1,13 +1,13 @@
 const TodosLoading = () => {
     return (
         <>
-        <div className=" flex w-[20rem] h-12 justify-between bg-neutral-600 mb-4 p-2 rounded-lg items-center animate-pulse">
+        <div className=" w-11/12 h-12 justify-between bg-white/20 mb-4 p-2 rounded-lg items-center animate-pulse">
         </div>
-        <div className=" flex w-[20rem] h-12 justify-between bg-neutral-600 mb-4 p-2 rounded-lg items-center animate-pulse">
+        <div className=" w-11/12 h-12 justify-between bg-white/20 mb-4 p-2 rounded-lg items-center animate-pulse">
         </div>
-        <div className=" flex w-[20rem] h-12 justify-between bg-neutral-600 mb-4 p-2 rounded-lg items-center animate-pulse">
+        <div className=" w-11/12 h-12 justify-between bg-white/20 mb-4 p-2 rounded-lg items-center animate-pulse">
         </div>
-        <div className=" flex w-[20rem] h-12 justify-between bg-neutral-600 mb-4 p-2 rounded-lg items-center animate-pulse">
+        <div className=" w-11/12 h-12 justify-between bg-white/20 mb-4 p-2 rounded-lg items-center animate-pulse">
         </div>
         </>
        

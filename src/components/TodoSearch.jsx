@@ -1,20 +1,22 @@
-import {FiSearch} from 'react-icons/fi'
+import {VscSearch} from 'react-icons/vsc'
 import React from 'react';
 import { TodoContext } from './TodoContext';
 
 
 const TodoSearch = () => {
-  const {searchValue, setSearchValue} = React.useContext(TodoContext)
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   return (
-    <div className="relative flex items-center text-gray-400 focus-within:text-gray-600 ">
-      <FiSearch className="absolute w-5 h-5 ml-3 stroke-[3px] pointer-events-none" />
-      <input
-        type="text"
-        placeholder="Search Task"
-        className="w-[20rem] bg-neutral-700 outline-none focus:outline-neutral-500 rounded-lg text-neutral-100 pr-3 pl-10 py-2"
-        onChange={(event) => setSearchValue(event.target.value)}
-      />
+    <div className="w-full flex justify-center items-center text-white/60 focus-within:text-white/30 ">
+      <div className="relative w-8/12 flex items-center">
+        <VscSearch className="absolute w-6 h-6 ml-3 pointer-events-none z-10" />
+        <input
+          type="text"
+          placeholder="Search Task"
+          className="w-full bg-white/5 bg-texture backdrop-blur-3xl outline-none border-2 border-white border-opacity-[0.03] rounded-lg text-white pr-3 pl-12 py-2 focus:placeholder:text-neutral-100/20 "
+          onChange={(event) => setSearchValue(event.target.value)}
+        />
+      </div>
     </div>
   );
 };

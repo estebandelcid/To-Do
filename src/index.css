@@ -33,6 +33,29 @@ code {
 
 @layer utilities {
 
+  .contenedor::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  .contenedor::-webkit-scrollbar:vertical {
+    width:10px;
+  }
+
+  .contenedor::-webkit-scrollbar-thumb {
+    background-color: #ffffff1e;
+    border-radius: 8px;
+    
+  }
+
+  .contenedor::-webkit-scrollbar-track {
+    background-color: #ffffff1e;
+    border-radius: 8px;
+  }
+
+  /* .scrollbar-simple::-webkit-scrollbar-button {
+    display: none;
+  } */
+  
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -43,5 +66,13 @@ code {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+  }
+  .bg-texture {
+    background-image: url('./assets/frozentexture15.png');
+    background-size: cover;
+    backdrop-filter: blur;
+  }
+  .bg-button {
+    background-image: url(./assets/bbutton.jpg);
   }
 }
