@@ -17,7 +17,8 @@ This application uses the local storage of your device to persist the informatio
     - [Tailwind](https://tailwindcss.com/docs/installation)
 
 - Designed on [Figma](https://www.figma.com/)
-    -[Figma File](https://www.figma.com/file/G5eF8H34MvuO7dGzensH8K/To-Do?type=design&t=GfRrsWsG7Vhx1OOt-6)
+
+    - [Figma File](https://www.figma.com/file/G5eF8H34MvuO7dGzensH8K/To-Do?type=design&t=GfRrsWsG7Vhx1OOt-6)
 
 
 # Getting Started with Create React App
