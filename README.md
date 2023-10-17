@@ -1,3 +1,25 @@
+# To-Do app
+A simple app to help to organize your daily tasks, simple and easy to use.
+
+[To-Do App](https://estebandelcid.github.io/To-Do/)
+
+This application uses the local storage of your device to persist the information.
+
+## How to use it 
+
+- To add a new task just go to the create task seccion, write the task and click add or just enter on the keyboard.
+- To mark a task completed just click on the arrow check.
+- To delete the task you have to click on the X and it will be deleted.
+
+## Build using:
+- Library: [React](https://es.react.dev/)
+
+    - [Tailwind](https://tailwindcss.com/docs/installation)
+
+- Designed on [Figma](https://www.figma.com/)
+    -[Figma File](https://www.figma.com/file/G5eF8H34MvuO7dGzensH8K/To-Do?type=design&t=GfRrsWsG7Vhx1OOt-6)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
