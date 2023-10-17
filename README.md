@@ -1,5 +1,5 @@
 # To-Do app
-A simple app to help to organize your daily tasks, simple and easy to use.
+A simple app to help to organize your daily tasks and easy to use.
 
 [To-Do App](https://estebandelcid.github.io/To-Do/)
 
