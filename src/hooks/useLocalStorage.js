@@ -27,7 +27,7 @@ const useLocalStorage = (itemName, initialValue) => {
       }, 2000);
       
       
-    }, [])
+    }, [itemName, initialValue])
   
     
   
@@ -36,7 +36,7 @@ const useLocalStorage = (itemName, initialValue) => {
       setItem(newItems)
     }
   
-    return {item, saveItems, loading, setLoading}
+    return {item, saveItems, loading, error, setLoading}
   }
 
   export default useLocalStorage;
