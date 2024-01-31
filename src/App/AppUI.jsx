@@ -5,7 +5,7 @@ import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
 import TodosLoading from "../components/TodosLoading";
 import EmptyTodos from "../components/EmptyTodos.jsx";
-import { TodoContext } from "../components/TodoContext.jsx";
+import { TodoContext } from "../context/TodoContext.js";
 import Modal from "../components/Modal.jsx";
 import MobileButtonCreateTodo from "../components/MobileButtonCreateTodo";
 import TodoForm from "../components/TodoForm";
@@ -36,17 +36,17 @@ const AppUI = () => {
               <TodoList>
                 {loading && <TodosLoading />}
 
-                {error && <p>Hubo un error, lo sentimos.😬</p>}
+                {error && <p>Hubo un error, lo sentimos.</p>}
 
-                {!loading && searchedTodos == 0 && <EmptyTodos />}
+                {!loading && searchedTodos.length === 0 && <EmptyTodos />}
 
                 {searchedTodos.map((todo) => (
                   <TodoItem
-                    key={todo.text}
+                    key={todo.id}
                     text={todo.text}
                     completed={todo.completed}
-                    onComplete={() => completeTodo(todo.text)}
-                    onDelete={() => deleteTodo(todo.text)}
+                    onComplete={() => completeTodo(todo.id)}
+                    onDelete={() => deleteTodo(todo.id)}
                   />
                 ))}
               </TodoList>
