@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoContext } from "../components/TodoContext";
+import { TodoContext } from "../context/TodoContext";
 import { VscClose } from 'react-icons/vsc'
 
 const TodoForm = () => {

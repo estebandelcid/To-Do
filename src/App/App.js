@@ -1,6 +1,6 @@
 import React from "react";
 import AppUI from "../App/AppUI.jsx";
-import { TodoProvider } from "../components/TodoContext.jsx";
+import { TodoProvider } from "../context/TodoContext.js";
 
 function App() {
   return (
