@@ -20,7 +20,7 @@ export const useLocalStorage = (itemName, initialValue) => {
         setLoading(false);
       } catch (error) {
         setLoading(false);
-        setError(true + "Hubo un error");
+        setError(true + "Error");
       }
     }, 2000);
   }, [itemName, initialValue]);
