@@ -1,6 +1,6 @@
 import { VscCheck, VscClose } from 'react-icons/vsc'
 
-const TodoItem = (props) => {
+export const TodoItem = (props) => {
     return (
       <li className={`relative flex w-[95%] min-w-60 border mb-4 p-2 rounded-lg items-center duration-20 ${props.completed && 'opacity-80'}`}
       >
@@ -29,5 +29,3 @@ const TodoItem = (props) => {
       </li>
     );
 }
-
-export {TodoItem}
