@@ -3,14 +3,14 @@ import { TodoCounter } from "../components/TodoCounter.jsx";
 import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
-import TodosLoading from "../components/TodosLoading";
-import EmptyTodos from "../components/EmptyTodos.jsx";
-import { TodoContext } from "../context/TodoContext.js";
-import Modal from "../components/Modal.jsx";
-import MobileButtonCreateTodo from "../components/MobileButtonCreateTodo";
-import TodoForm from "../components/TodoForm";
+import { TodosLoading } from "../components/TodosLoading";
+import { EmptyTodos } from "../components/EmptyTodos.jsx";
+import { useTodos } from "../hooks/useTodos.js";
+import { Modal } from "../components/Modal.jsx";
+import { MobileButtonCreateTodo } from "../components/MobileButtonCreateTodo";
+import { TodoForm } from "../components/TodoForm";
 
-const AppUI = () => {
+export const AppUI = () => {
   const {
     searchedTodos,
     completeTodo,
@@ -19,20 +19,28 @@ const AppUI = () => {
     error,
     openModal,
     setOpenModal,
-  } = React.useContext(TodoContext);
+    totalTodos,
+    completedTodos,
+    addTodo,
+    searchValue,
+    setSearchValue,
+  } = useTodos();
   return (
     <>
       <div className="grid h-screen w-screen place-items-center ">
-
         <div className=" grid grid-cols-1 w-[80%] justify-items-center ">
-         
           <div className="flex flex-col h-[80%] w-full space-y-12 place-items-center items-center">
             <div className="w-full justify-center space-y-6">
-              <TodoCounter />
-              <TodoSearch />
+              <TodoCounter
+                totalTodos={totalTodos}
+                completedTodos={completedTodos}
+              />
+              <TodoSearch
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+              />
             </div>
-            <div className="flex justify-center min-w-[300px] w-full h-[300px] lg:max-h-[24rem] bg-texture bg-white/5 border-2 border-white border-opacity-[0.03] rounded-lg backdrop-filter backdrop-blur-3xl"
-            >
+            <div className="flex justify-center min-w-[300px] w-full h-[300px] lg:max-h-[24rem] bg-texture bg-white/5 border-2 border-white border-opacity-[0.03] rounded-lg backdrop-filter backdrop-blur-3xl">
               <TodoList>
                 {loading && <TodosLoading />}
 
@@ -56,19 +64,16 @@ const AppUI = () => {
 
             {openModal && (
               <Modal>
-                <TodoForm />
+                <TodoForm addTodo={addTodo} setOpenModal={setOpenModal} />
               </Modal>
             )}
           </div>
 
           <div className=" max-md:hidden w-full rounded-lg ">
-            <TodoForm />
+            <TodoForm addTodo={addTodo} setOpenModal={setOpenModal} />
           </div>
-
         </div>
       </div>
     </>
   );
 };
-
-export default AppUI;

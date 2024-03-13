@@ -1,13 +1,8 @@
 import React from "react";
-import AppUI from "../App/AppUI.jsx";
-import { TodoProvider } from "../context/TodoContext.js";
+import { AppUI } from "../App/AppUI.jsx";
 
 function App() {
-  return (
-    <TodoProvider>
-      <AppUI />
-    </TodoProvider>
-  );
+  return <AppUI />;
 }
 
 export default App;
