@@ -5,7 +5,7 @@ export const TodoList = (props) => {
       {props.error && props.onError()}
       {!props.loading && !props.totalTodos && props.onEmptyTodos()}
       {!!props.totalTodos &&
-        !props.searchedTodos.length &&
+        !props.searchedTodos?.length &&
         props.onEmptySearch(props.searchValue)}
       {(!props.loading && !props.error) && props.searchedTodos.map(props.render)}
     </ul>
