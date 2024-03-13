@@ -1,8 +1,6 @@
 import React from "react"
-import { TodoContext } from "../context/TodoContext";
 
-const TodoCounter = () => {
-    const {totalTodos, completedTodos} = React.useContext(TodoContext)
+export const TodoCounter = ({totalTodos, completedTodos}) => {
 
     return (
       <div className="flex flex-col items-center ">
@@ -29,5 +27,4 @@ const TodoCounter = () => {
     );
 }
 
-export {TodoCounter}
 

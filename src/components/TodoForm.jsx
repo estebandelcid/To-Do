@@ -1,9 +1,7 @@
 import React from "react";
-import { TodoContext } from "../context/TodoContext";
-import { VscClose } from 'react-icons/vsc'
+import { VscClose } from "react-icons/vsc";
 
-const TodoForm = () => {
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
+export const TodoForm = ({ addTodo, setOpenModal }) => {
   const [newTodoValue, setNewTodoValue] = React.useState("");
 
   const onSubmit = (event) => {
@@ -12,6 +10,7 @@ const TodoForm = () => {
     setOpenModal(false);
     setNewTodoValue("");
   };
+
   const onCancel = () => {
     setOpenModal(false);
   };
@@ -33,7 +32,6 @@ const TodoForm = () => {
         <p className="text-center font-bold text-white mb-7 md:hidden">
           Task name
         </p>
-       
 
         <textarea
           className="md:hidden w-[90%] h-28 min-h-[44px] max-h-60 bg-white/5 bg-opacity-40 bg-texture backdrop-blur-3xl rounded-lg  text-white p-2 outline-none focus:placeholder:text-white/20 border-2 border-white border-opacity-[0.02]"
@@ -44,9 +42,9 @@ const TodoForm = () => {
         />
         <div className="relative w-[87%] flex items-center text-white/60 focus-within:text-white/30">
           <VscClose
-              size="2rem"
-              className="hidden md:flex absolute ml-3 pointer-events-none z-10 rotate-45"
-            />
+            size="2rem"
+            className="hidden md:flex absolute ml-3 pointer-events-none z-10 rotate-45"
+          />
           <input
             className="hidden md:flex w-full h-11 min-h-[44px] max-h-24 justify-center items-center bg-white/5 bg-opacity-40 bg-texture backdrop-blur-2xl rounded-lg text-white  pl-12 p-2 outline-none placeholder:font-bold placeholder:text-lg focus:placeholder:text-white/20 border-2 border-white border-opacity-[0.02]"
             placeholder="Create new Task"
@@ -57,8 +55,7 @@ const TodoForm = () => {
             required
           />
         </div>
-         
-       
+
         <div className="flex justify-between items-center mt-4 space-x-4 md:w-[10%] md:mt-0 md:justify-end md:space-x-0">
           <button
             className="cursor-pointer inline-block text-xl text-white font-bold w-28 h-12 rounded-lg hover:bg-white/10 hover:text-white/80 hover:backdrop-blur-3xl transition duration-300 hover:border-solid md:hidden"
@@ -88,8 +85,3 @@ const TodoForm = () => {
     </>
   );
 };
-
-export default TodoForm;
-
-// bg-[#4d017c]
-// bg-gradient-to-r from-purple-500 to-pink-500

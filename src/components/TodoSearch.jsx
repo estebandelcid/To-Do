@@ -1,11 +1,7 @@
-import {VscSearch} from 'react-icons/vsc'
-import React from 'react';
-import { TodoContext } from '../context/TodoContext';
+import { VscSearch } from "react-icons/vsc";
+import React from "react";
 
-
-const TodoSearch = () => {
-  const { searchValue, setSearchValue } = React.useContext(TodoContext);
-
+export const TodoSearch = ({ searchValue, setSearchValue }) => {
   return (
     <div className="w-full flex justify-center items-center text-white/60 focus-within:text-white/30 ">
       <div className="relative w-8/12 flex items-center">
@@ -21,7 +17,3 @@ const TodoSearch = () => {
     </div>
   );
 };
-
-export { TodoSearch };
-
-
