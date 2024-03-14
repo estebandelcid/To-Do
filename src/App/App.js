@@ -10,6 +10,7 @@ import { Modal } from "../components/Modal.jsx";
 import { MobileButtonCreateTodo } from "../components/MobileButtonCreateTodo";
 import { TodoForm } from "../components/TodoForm";
 import { EmptySearch } from "../components/EmptySearch.jsx";
+import { ChangeAlert } from "../components/ChangeAlert.jsx";
 
 function App() {
   const {
@@ -25,6 +26,7 @@ function App() {
     addTodo,
     searchValue,
     setSearchValue,
+    synchronizeTodos,
   } = useTodos();
   return (
     <>
@@ -56,13 +58,13 @@ function App() {
                 )}
                 onEmptyTodos={() => <EmptyTodos />}
                 onEmptySearch={() => <EmptySearch searchValue={searchValue} />}
-                render={todo => (
+                render={(todo) => (
                   <TodoItem
                     key={todo.id}
                     text={todo.text}
                     completed={todo.completed}
                     onComplete={() => completeTodo(todo.id)}
-                    onDelete={() => deleteTodo(todo.id)} 
+                    onDelete={() => deleteTodo(todo.id)}
                   />
                 )}
               />
@@ -80,6 +82,8 @@ function App() {
           <div className=" max-md:hidden w-full rounded-lg ">
             <TodoForm addTodo={addTodo} setOpenModal={setOpenModal} />
           </div>
+
+          <ChangeAlert synchronizeTodos={synchronizeTodos} />
         </div>
       </div>
     </>
