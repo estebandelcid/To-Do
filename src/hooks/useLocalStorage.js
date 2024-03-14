@@ -4,6 +4,7 @@ export const useLocalStorage = (itemName, initialValue) => {
   const [item, setItem] = React.useState(initialValue);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(false);
+  const [synchronizedItem, setSynchronizedItem] = React.useState(true);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -18,28 +19,23 @@ export const useLocalStorage = (itemName, initialValue) => {
           setItem(parsedItems);
         }
         setLoading(false);
-        console.log('se ejecuto el useEffect')
+        setSynchronizedItem(true);
       } catch (error) {
         setLoading(false);
         setError(true + "Error");
       }
-      return(() => {
-      })
+      return () => {};
     }, 2000);
-  }, []);
+  }, [synchronizedItem]);
 
   const saveItems = (newItems) => {
     localStorage.setItem(itemName, JSON.stringify(newItems));
     setItem(newItems);
   };
 
-  return { item, saveItems, loading, error, setLoading };
+  const synchronize = () => {
+    setLoading(true);
+    setSynchronizedItem(false);
+  };
+  return { item, saveItems, loading, error, setLoading, synchronize };
 };
-
-// const defaultTodos = [
-//   {text: 'Estudiar Backend', completed: false},
-//   {text: 'Ver introducción de Bootstrap', completed: false},
-//   {text: 'Crear una nueva App con Next', completed: true},
-//   {text: 'Servir la cena', completed: false},
-//   {text: 'Practica del Ingles de una hora diaria', completed: true},
-// ]

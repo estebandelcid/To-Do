@@ -7,6 +7,7 @@ export const useTodos = () => {
     saveItems: saveTodos,
     loading,
     error,
+    synchronize: synchronizeTodos,
   } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
 
@@ -59,5 +60,6 @@ export const useTodos = () => {
     error,
     openModal,
     setOpenModal,
+    synchronizeTodos,
   };
 };
