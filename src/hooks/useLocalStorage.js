@@ -24,7 +24,6 @@ export const useLocalStorage = (itemName, initialValue) => {
         setError(true + "Error");
       }
       return(() => {
-        setChangeLocalState(false)
       })
     }, 2000);
   }, []);
