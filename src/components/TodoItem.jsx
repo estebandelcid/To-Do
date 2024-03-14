@@ -13,7 +13,7 @@ export const TodoItem = (props) => {
           />
         </span>
         <p
-          className={`w-[97%] text-white break-words pr-8  ${
+          className={`w-[97%] text-white text-base break-words pr-8  ${
             props.completed && "line-through opacity-20"
           }`}
         >

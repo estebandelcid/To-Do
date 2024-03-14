@@ -58,7 +58,7 @@ export const TodoForm = ({ addTodo, setOpenModal }) => {
 
         <div className="flex justify-between items-center mt-4 space-x-4 md:w-[10%] md:mt-0 md:justify-end md:space-x-0">
           <button
-            className="cursor-pointer inline-block text-xl text-white font-bold w-28 h-12 rounded-lg hover:bg-white/10 hover:text-white/80 hover:backdrop-blur-3xl transition duration-300 hover:border-solid md:hidden"
+            className="cursor-pointer inline-block text-xl text-white font-bold w-28 h-12 rounded-lg hover:bg-white/10 hover:text-white/80 transition duration-300 md:hidden"
             type="button"
             onClick={onCancel}
           >

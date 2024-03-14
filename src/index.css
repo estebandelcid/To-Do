@@ -70,7 +70,6 @@ code {
   .bg-texture {
     background-image: url('./assets/frozentexture15.png');
     background-size: cover;
-    backdrop-filter: blur;
   }
   .bg-button {
     background-image: url(./assets/bbutton.jpg);
