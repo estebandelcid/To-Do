@@ -35,10 +35,12 @@ function App() {
               <TodoCounter
                 totalTodos={totalTodos}
                 completedTodos={completedTodos}
+                loading={loading}
               />
               <TodoSearch
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
+                loading={loading}
               />
             </div>
             <div className="flex justify-center min-w-[300px] w-full h-[300px] lg:max-h-[24rem] bg-texture bg-white/5 border-2 border-white border-opacity-[0.03] rounded-lg backdrop-filter backdrop-blur-3xl">
