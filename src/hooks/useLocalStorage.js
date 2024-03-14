@@ -18,12 +18,16 @@ export const useLocalStorage = (itemName, initialValue) => {
           setItem(parsedItems);
         }
         setLoading(false);
+        console.log('se ejecuto el useEffect')
       } catch (error) {
         setLoading(false);
         setError(true + "Error");
       }
+      return(() => {
+        setChangeLocalState(false)
+      })
     }, 2000);
-  }, [itemName, initialValue]);
+  }, []);
 
   const saveItems = (newItems) => {
     localStorage.setItem(itemName, JSON.stringify(newItems));
