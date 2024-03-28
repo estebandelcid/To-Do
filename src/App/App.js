@@ -13,21 +13,24 @@ import { EmptySearch } from "../components/EmptySearch.jsx";
 import { ChangeAlert } from "../components/ChangeAlert.jsx";
 
 function App() {
+  const { states, stateUpdaters } = useTodos();
   const {
+    totalTodos,
+    completedTodos,
+    searchValue,
     searchedTodos,
-    completeTodo,
-    deleteTodo,
     loading,
     error,
     openModal,
-    setOpenModal,
-    totalTodos,
-    completedTodos,
-    addTodo,
-    searchValue,
+    completeTodo,
+  } = states;
+  const {
     setSearchValue,
+    deleteTodo,
+    addTodo,
+    setOpenModal,
     synchronizeTodos,
-  } = useTodos();
+  } = stateUpdaters;
   return (
     <>
       <div className="grid h-screen w-screen place-items-center ">

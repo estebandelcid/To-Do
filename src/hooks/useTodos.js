@@ -46,20 +46,22 @@ export const useTodos = () => {
     });
     return saveTodos(newTodos);
   };
-
-  return {
+  const states = {
     totalTodos,
     completedTodos,
     searchValue,
-    setSearchValue,
     searchedTodos,
-    completeTodo,
-    deleteTodo,
-    addTodo,
     loading,
     error,
     openModal,
+    completeTodo,
+  };
+  const stateUpdaters = {
+    setSearchValue,
+    deleteTodo,
+    addTodo,
     setOpenModal,
     synchronizeTodos,
   };
+  return { states, stateUpdaters };
 };
