@@ -23,6 +23,19 @@ export const TodoEdit = (props) => {
     event.target.style.height = 'auto';
     event.target.style.height = event.target.scrollHeight + 'px';
   };
+  React.useEffect(() => {
+    const adjustTextareaHeight = () => {
+      const textareaElements = document.querySelectorAll(".box-text");
+      textareaElements.forEach((element) => {
+        element.style.height = `${element.scrollHeight}px`;
+      });
+    };
+    adjustTextareaHeight();
+    window.addEventListener("resize", adjustTextareaHeight);
+    return () => {
+      window.removeEventListener("resize", adjustTextareaHeight);
+    };
+  }, []);
   return (
     <form
       onSubmit={onSubmitUpdate}
@@ -33,6 +46,7 @@ export const TodoEdit = (props) => {
         className={`box-text w-[95%] text-white bg-transparent text-base break-words pr-8 border-none outline-none overflow-hidden resize-none  ${
           props.completed && "line-through opacity-20"
         }`}
+        rows="1"
         value={inputValue}
         onChange={onChange}
         readOnly={disabled}
