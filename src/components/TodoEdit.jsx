@@ -20,6 +20,8 @@ export const TodoEdit = (props) => {
 
   const onChange = (event) => {
     setInputValue(event.target.value);
+    event.target.style.height = 'auto';
+    event.target.style.height = event.target.scrollHeight + 'px';
   };
   return (
     <form
@@ -28,7 +30,7 @@ export const TodoEdit = (props) => {
       className="w-full flex items-center"
     >
       <textarea
-        className={`box-text w-[95%] text-white bg-transparent text-base break-words pr-8 border-none outline-none  ${
+        className={`box-text w-[95%] text-white bg-transparent text-base break-words pr-8 border-none outline-none overflow-hidden resize-none  ${
           props.completed && "line-through opacity-20"
         }`}
         value={inputValue}
