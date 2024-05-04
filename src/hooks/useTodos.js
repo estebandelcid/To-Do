@@ -46,6 +46,12 @@ export const useTodos = () => {
     });
     return saveTodos(newTodos);
   };
+  const editTodo = (id, newText) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(todo => todo.id === id);
+    newTodos[todoIndex].text = newText;
+    return saveTodos(newTodos);
+  }
   const states = {
     totalTodos,
     completedTodos,
@@ -62,6 +68,7 @@ export const useTodos = () => {
     addTodo,
     setOpenModal,
     synchronizeTodos,
+    editTodo,
   };
   return { states, stateUpdaters };
 };
