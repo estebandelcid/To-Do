@@ -64,6 +64,7 @@ function App() {
                 render={(todo) => (
                   <TodoItem
                     key={todo.id}
+                    id={todo.id}
                     text={todo.text}
                     completed={todo.completed}
                     onComplete={() => completeTodo(todo.id)}
