@@ -1,4 +1,5 @@
 import { VscCheck, VscClose } from 'react-icons/vsc'
+import { TodoEdit } from './TodoEdit';
 
 export const TodoItem = (props) => {
     return (
@@ -12,13 +13,14 @@ export const TodoItem = (props) => {
             }`}
           />
         </span>
-        <p
+        <TodoEdit id={props.id} text={props.text} completed={props.completed}/>
+        {/* <p
           className={`w-[97%] text-white text-base break-words pr-8  ${
             props.completed && "line-through opacity-20"
           }`}
         >
           {props.text}
-        </p>
+        </p> */}
 
         <span onClick={props.onDelete} className='absolute right-2'>
           <VscClose
