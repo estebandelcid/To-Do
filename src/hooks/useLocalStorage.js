@@ -25,7 +25,7 @@ export const useLocalStorage = (itemName, initialValue) => {
         setError(true + "Error");
       }
       return () => {};
-    }, 2000);
+    }, 1000);
   }, [synchronizedItem]);
 
   const saveItems = (newItems) => {
