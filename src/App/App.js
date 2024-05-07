@@ -30,6 +30,7 @@ function App() {
     addTodo,
     setOpenModal,
     synchronizeTodos,
+    editTodo,
   } = stateUpdaters;
   return (
     <>
@@ -69,6 +70,7 @@ function App() {
                     completed={todo.completed}
                     onComplete={() => completeTodo(todo.id)}
                     onDelete={() => deleteTodo(todo.id)}
+                    editTodo={editTodo}
                   />
                 )}
               />
