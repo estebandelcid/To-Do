@@ -1,21 +1,22 @@
 import React from "react";
 import { MdModeEdit } from "react-icons/md";
-import { useTodos } from "../hooks/useTodos";
 
 export const TodoEdit = (props) => {
   const [disabled, setDisabled] = React.useState(true);
-  const [inputValue, setInputValue] = React.useState(props.text);
-  const focusInputRef = React.useRef();
-  const {
-    stateUpdaters: { editTodo },
-  } = useTodos();
+  const initialValue = props.text;
+  const [inputValue, setInputValue] = React.useState(initialValue);
+  const focusInputRef = React.useRef(null);
+
+  const handleClick = () => {
+    focusInputRef.current.focus();
+    setDisabled(!disabled);
+  };
   const onSubmitUpdate = (event) => {
     event.preventDefault();
     const id = props.id;
     const newText = inputValue;
-    editTodo(id, newText.trim());
-    setDisabled(!disabled);
-    focusInputRef.current.focus();
+    props.editTodo(id, newText.trim());
+    handleClick();
   };
 
   const onChange = (event) => {
@@ -36,16 +37,15 @@ export const TodoEdit = (props) => {
       window.removeEventListener("resize", adjustTextareaHeight);
     };
   }, []);
+  
   return (
-    <form
-      onSubmit={onSubmitUpdate}
-      action=""
-      className="w-full flex items-center"
-    >
+    <form onSubmit={onSubmitUpdate} className="w-full flex items-center">
       <textarea
-        className={`box-text w-[95%] text-white bg-transparent text-base break-words pr-8 border-none outline-none overflow-hidden resize-none  ${
-          props.completed && "line-through opacity-20"
+        className={`box-text relative w-[90%] text-white bg-transparent text-base break-words pr-8 border-none outline-none overflow-hidden resize-none  ${
+          props.completed && "line-through opacity-20 transition-all "
         }`}
+        name="updateText"
+        type="text"
         rows="1"
         value={inputValue}
         onChange={onChange}
@@ -53,12 +53,28 @@ export const TodoEdit = (props) => {
         ref={focusInputRef}
         required
       />
-      <button type="submit">
-        <MdModeEdit
-          size="1.8rem"
-          className="absolute fill-white/70 top-1 right-10"
-        />
-      </button>
+      {disabled && (
+        <button
+          type="button"
+          onClick={handleClick}
+          className="absolute right-10 cursor-pointer"
+        >
+          <span>
+            <MdModeEdit
+              size="2rem"
+              className="fill-white/70 hover:fill-[#ff2776] hover:scale-110 duration-300"
+            />
+          </span>
+        </button>
+      )}
+      {!disabled && (
+        <button
+          type="submit"
+          className="absolute right-10 bottom-2 text-white/60 border border-white rounded-md px-2 hover:bg-white/10 hover:text-white/80 duration-300"
+        >
+          Save
+        </button>
+      )}
     </form>
   );
 };
