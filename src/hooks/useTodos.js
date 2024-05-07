@@ -47,11 +47,11 @@ export const useTodos = () => {
     return saveTodos(newTodos);
   };
   const editTodo = (id, newText) => {
+    const todoIndex = todos.findIndex(todo => todo.id === id);
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(todo => todo.id === id);
     newTodos[todoIndex].text = newText;
-    return saveTodos(newTodos);
-  }
+    saveTodos(newTodos);
+  };
   const states = {
     totalTodos,
     completedTodos,
