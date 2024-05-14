@@ -10,6 +10,7 @@ This application uses the local storage of your device to persist the informatio
 - To add a new task just go to the create task seccion, write the task and click add or just enter on the keyboard.
 - To mark a task completed just click on the arrow check.
 - To delete the task you have to click on the X and it will be deleted.
+- To edit, just press the pencil icon, make the necessary modifications and press the "save" button.
 
 ## Build using:
 - Library: [React](https://es.react.dev/)
